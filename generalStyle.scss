@@ -1,0 +1,152 @@
+/** variables **/
+$color1: #3A3042;
+$color2: #DB9D47;
+$color3: #FF784F;
+$color4: #CEDFD9;
+$color5: #EDFFD9;
+$fontsize: 16px;
+$font-family: "Public Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family2: "Metropolis","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+$header-placement: 80px;
+
+/* Use the variables */
+body {
+  background-color: $color1;
+  color: $color2;
+  font-size: $fontsize;
+  font-family: $font-family;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+#container {
+  width: 100%;
+  max-width: 1200px;
+  display: inline-block;
+}
+
+/** HEADER */
+
+/** BANNER **/
+section#banner {
+  color: $color1;
+  width: 100%;
+  background-color: $color3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 50px;
+  z-index: 1;
+  div{
+    display: flex;
+    justify-content: space-evenly;
+    ul{
+      text-align: center;
+        margin: 0;
+    }
+  }
+}
+
+/** NAVIGATION BAR */
+nav {
+  overflow: hidden;
+  position: absolute;
+  top: $header-placement;
+  width: 100%;
+  z-index: 8;
+  ul {
+    text-align: center;
+    list-style-type: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    li {
+      display: inline;
+      a {
+        color: $color3;
+        text-decoration: none;
+        padding: 14px;
+        &:hover {
+          color: $color4;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+  top:60px;
+  left:120px;
+  margin: 0;
+  z-index: 9;
+  #logoimg{
+    width: 60px;
+  }
+}
+
+.socials {
+  position: absolute;
+  top: $header-placement;
+  margin: 0;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  right: 0;
+  z-index: 9;
+  .fa {
+     display:inline-block;
+     font-size:26px;
+     cursor:pointer;
+     padding:0px;
+     height:40px;
+     border-radius:50%;
+     text-align:center;
+     position:relative;
+     z-index:1;
+     color:#fff;
+  }
+}
+
+/** CONTENT **/
+h1 {
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-size: 60px;
+  color: $color4;
+  font-family: $font-family2;
+  font-weight: 600;
+}
+
+h5{
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-size: 25px;
+  color: $color4;
+  font-family: $font-family2;
+  font-weight: 600;
+}
+
+#h1-showcase {
+  top: 80px;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  h1{
+    padding-top: 80px;
+    margin: 3rem 0 0;
+  }
+  h5{
+    margin-top: 0px;
+  }
+  strong{
+    color: #FFF;
+  }
+}
+
+.content {
+  text-align: center;
+}

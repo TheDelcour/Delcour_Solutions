@@ -1,0 +1,121 @@
+/** variables **/
+/* Use the variables */
+body {
+  background-color: #3A3042;
+  color: #DB9D47;
+  font-size: 16px;
+  font-family: "Public Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 300; }
+
+#container {
+  width: 100%;
+  max-width: 1200px;
+  display: inline-block; }
+
+/** HEADER */
+/** BANNER **/
+section#banner {
+  color: #3A3042;
+  width: 100%;
+  background-color: #FF784F;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 50px;
+  z-index: 1; }
+  section#banner div {
+    display: flex;
+    justify-content: space-evenly; }
+    section#banner div ul {
+      text-align: center;
+      margin: 0; }
+
+/** NAVIGATION BAR */
+nav {
+  overflow: hidden;
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  z-index: 8; }
+  nav ul {
+    text-align: center;
+    list-style-type: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px; }
+    nav ul li {
+      display: inline; }
+      nav ul li a {
+        color: #FF784F;
+        text-decoration: none;
+        padding: 14px; }
+        nav ul li a:hover {
+          color: #CEDFD9; }
+
+.logo {
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  margin: 0;
+  z-index: 9; }
+  .logo #logoimg {
+    width: 60px; }
+
+.socials {
+  position: absolute;
+  top: 80px;
+  margin: 0;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  right: 0;
+  z-index: 9; }
+  .socials .fa {
+    display: inline-block;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 0px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #fff; }
+
+/** CONTENT **/
+h1 {
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-size: 60px;
+  color: #CEDFD9;
+  font-family: "Metropolis", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600; }
+
+h5 {
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-size: 25px;
+  color: #CEDFD9;
+  font-family: "Metropolis", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600; }
+
+#h1-showcase {
+  top: 80px; }
+
+.row {
+  position: relative;
+  width: 100%;
+  text-align: center; }
+  .row h1 {
+    padding-top: 80px;
+    margin: 3rem 0 0; }
+  .row h5 {
+    margin-top: 0px; }
+  .row strong {
+    color: #FFF; }
+
+.content {
+  text-align: center; }
+
+/*# sourceMappingURL=generalStyle.css.map */
