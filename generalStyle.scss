@@ -1,3 +1,6 @@
+/**imports**/
+@import "animations/particles.css";
+
 /** variables **/
 $color1: #3A3042;
 $color2: #DB9D47;
@@ -7,10 +10,23 @@ $color5: #EDFFD9;
 $fontsize: 16px;
 $font-family: "Public Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 $font-family2: "Metropolis","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-$header-placement: 80px;
+$header-placement: 15%;
+$maxWidth: 1300px;
+$midBoxPadding: 5%;
 
-/* Use the variables */
+
+
+html, body {
+  width: 100%;
+  height: 100%
+}
+
+#canvas{
+  background: #3A3042;
+}
+
 body {
+  overflow: hidden;
   background-color: $color1;
   color: $color2;
   font-size: $fontsize;
@@ -19,20 +35,42 @@ body {
   font-weight: 300;
 }
 
-#container {
-  width: 100%;
-  max-width: 1200px;
-  display: inline-block;
+.container {
+  max-width: $maxWidth;
+  padding-left: $midBoxPadding;
+  padding-right: $midBoxPadding;
+  display: flex;
+  justify-content: center;
 }
+
+.row {
+  position: relative;
+  max-width: $maxWidth;
+  padding-left: $midBoxPadding;
+  padding-right: $midBoxPadding;
+  width: 100%;
+  text-align: center;
+  h1{
+    padding-top: 80px;
+    margin: 3rem 0 0;
+  }
+  h5{
+    margin-top: 0px;
+  }
+  strong{
+    color: $color3;
+  }
+}
+
 
 /** HEADER */
 
 /** BANNER **/
 section#banner {
   color: $color1;
-  width: 100%;
   background-color: $color3;
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   max-height: 50px;
@@ -53,32 +91,72 @@ nav {
   position: absolute;
   top: $header-placement;
   width: 100%;
+  align-items: start;
   z-index: 8;
   ul {
-    text-align: center;
-    list-style-type: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 15px;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
     li {
       display: inline;
+      flex-basis: 5%;
       a {
+        position: relative;
+        margin: 5px;
         color: $color3;
         text-decoration: none;
-        padding: 14px;
+        transition: 1s;
+
+        &::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $color4;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 1s;
+      }
         &:hover {
-          color: $color4;
-        }
+        color: $color4;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
       }
     }
   }
 }
 
+.borderTop {
+  border-top: 2px solid $color1;
+  transition: transform 1.5s ease;
+}
+
+.borderBot {
+  border-bottom: 2px solid $color1;
+  transition: transform 1.5s ease;
+}
+
+.borderTop:hover{
+  border-top: 2px solid $color4;
+  -webkit-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+} 
+
+.borderBot:hover{
+
+} 
+
 .logo {
   position: absolute;
-  top:60px;
-  left:120px;
-  margin: 0;
+  top:$header-placement;
+  left:10%;
   z-index: 9;
   #logoimg{
     width: 60px;
@@ -88,11 +166,9 @@ nav {
 .socials {
   position: absolute;
   top: $header-placement;
-  margin: 0;
-  width: 30%;
   display: flex;
   justify-content: center;
-  right: 0;
+  right: 10%;
   z-index: 9;
   .fa {
      display:inline-block;
@@ -104,7 +180,11 @@ nav {
      text-align:center;
      position:relative;
      z-index:1;
-     color:#fff;
+     color:$color4;
+
+     &:hover {
+          color: $color3;
+        }
   }
 }
 
@@ -128,25 +208,18 @@ h5{
 }
 
 #h1-showcase {
-  top: 80px;
-}
-
-.row {
+  padding-top: 7%;
   position: relative;
-  width: 100%;
-  text-align: center;
-  h1{
-    padding-top: 80px;
-    margin: 3rem 0 0;
+  #content{
+    position: absolute; 
+    top: 100%; 
+    left: 26%; 
   }
-  h5{
-    margin-top: 0px;
-  }
-  strong{
-    color: #FFF;
+  #particleCanvas{
+    position: absolute;
+    left: 0;
+    top: 140%;
   }
 }
 
-.content {
-  text-align: center;
-}
+
