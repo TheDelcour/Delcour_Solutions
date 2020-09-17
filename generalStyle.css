@@ -1,7 +1,10 @@
 /**imports**/
 @import url(animations/particles.css);
 /** variables **/
-html, body {
+html {
+  scroll-behavior: smooth; }
+
+body {
   width: 100%;
   height: 100%; }
 
@@ -9,7 +12,6 @@ html, body {
   background: #3A3042; }
 
 body {
-  overflow: hidden;
   background-color: #3A3042;
   color: #DB9D47;
   font-size: 16px;
@@ -44,11 +46,7 @@ body {
 section#banner {
   color: #3A3042;
   background-color: #FF784F;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  max-height: 50px;
+  position: relative;
   z-index: 1; }
   section#banner div {
     display: flex;
@@ -58,10 +56,12 @@ section#banner {
       margin: 0; }
 
 /** NAVIGATION BAR */
+header {
+  position: relative; }
+
 nav {
   overflow: hidden;
-  position: absolute;
-  top: 15%;
+  position: relative;
   width: 100%;
   align-items: start;
   z-index: 8; }
@@ -110,16 +110,14 @@ nav {
   transform: translateY(-50px); }
 
 .logo {
-  position: absolute;
-  top: 15%;
+  position: relative;
   left: 10%;
   z-index: 9; }
   .logo #logoimg {
     width: 60px; }
 
 .socials {
-  position: absolute;
-  top: 15%;
+  position: relative;
   display: flex;
   justify-content: center;
   right: 10%;
@@ -153,18 +151,48 @@ h5 {
   font-size: 25px;
   color: #CEDFD9;
   font-family: "Metropolis", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600; }
+  font-weight: 600;
+  text-align: center; }
 
-#h1-showcase {
-  padding-top: 7%;
-  position: relative; }
-  #h1-showcase #content {
+/** ONPAGE NAV **/
+.canvasCon {
+  position: relative;
+  height: 600px; }
+  .canvasCon #content {
     position: absolute;
-    top: 100%;
-    left: 26%; }
-  #h1-showcase #particleCanvas {
-    position: absolute;
-    left: 0;
-    top: 140%; }
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+  .canvasCon #particleCanvas {
+    position: absolute; }
+
+.onpage-nav {
+  position: relative;
+  height: 100px; }
+  .onpage-nav #page-nav {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    align-items: start;
+    z-index: 8; }
+    .onpage-nav #page-nav ul {
+      display: flex;
+      padding: 5px;
+      justify-content: center; }
+      .onpage-nav #page-nav ul li {
+        display: inline;
+        flex-basis: 5%; }
+        .onpage-nav #page-nav ul li a {
+          position: relative;
+          margin: 5px;
+          color: #FF784F;
+          text-decoration: none; }
+        .onpage-nav #page-nav ul li:hover {
+          color: #CEDFD9; }
+
+.line {
+  height: 5px;
+  background-color: #FF784F; }
 
 /*# sourceMappingURL=generalStyle.css.map */
